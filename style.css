@@ -29,7 +29,7 @@
             100% {transform:translate(-100%,0);}
           }
 
-     
+        
         .navigation + .join-now-sec{
            padding-top: 5em;
         }
@@ -62,7 +62,7 @@
             margin-left: 18px;
             margin-top: 14px;
         }
-
+/* about join-section */
         .join-now-sec {
             background-image: url(images/floral.png);
             background-color: rgba(239, 50, 69, 0.57);
@@ -267,3 +267,5 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+
+        @media screen (max-width:900px)
