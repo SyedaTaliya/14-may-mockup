@@ -29,12 +29,20 @@
             100% {transform:translate(-100%,0);}
           }
 
+     
+        .navigation + .join-now-sec{
+           padding-top: 5em;
+        }
+
         /* navigation */
 
         .navigation {
             display: flex;
             justify-content: space-between;
             background-color: #4c4c4c;
+            position: fixed;
+            top: 25px;
+            width: 100%;   
         }
 
         .navigation ul {
