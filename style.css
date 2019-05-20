@@ -1,13 +1,33 @@
         body {
             margin: 0;
             text-align: center;
-            background-image: url(images/floral.png); 
         }
-        p{
+
+        p {
             font-family: 'Source Sans Pro', sans-serif;
-            font-size:16px;
-            font-weight:bold;
+            font-size: 16px;
+            font-weight: bold;
         }
+        /* about marquee */
+        .headline{
+            background-color: #ed484c;
+            line-height: 10px;
+            color:white;
+            white-space: nowrap;
+            overflow: hidden;   
+            }
+
+        .headline p{
+            margin: 0;
+            padding: 5px 0px;
+            padding-left: 50%;
+            animation: headline 9s linear infinite;
+            }
+
+        @keyframes headline {
+            0% {transform:translate(0,0);}
+            100% {transform:translate(-100%,0);}
+          }
 
         /* navigation */
 
@@ -24,7 +44,8 @@
         .navigation ul li {
             list-style-type: none;
             padding: 10px;
-            color: white;
+            color: lightgray;
+            font-size: 20px;
         }
 
         .navigation img {
@@ -35,10 +56,11 @@
         }
 
         .join-now-sec {
+            background-image: url(images/floral.png);
             background-color: rgba(239, 50, 69, 0.57);
             padding: 10px 10px;
             text-align: center;
-            height: 100%;
+            height: 400px;
         }
 
         .join-now {
@@ -49,8 +71,9 @@
             border-style: none;
             margin: 20px;
         }
-        .join-now-sec p{
-            font-weight:normal !important;
+
+        .join-now-sec p {
+            font-weight: normal !important;
         }
 
         h1 {
@@ -70,64 +93,169 @@
         }
 
         .service-section {
+            background-image: url(images/floral.png);
             background-color: rgba(171, 163, 147, 0.23);
         }
 
-        .port-img {
-            width: 200px;
-            height: 250px;
-        }
+
 
         .portfolio-sec {
+            background-image: url(images/floral.png);
             background-color: rgba(148, 107, 36, 0.35);
         }
 
+        .portfolio-imgs {
+            display: flex;
+        }
+
         .portfolio-sec img {
-            width: 200px;
-            height: 150px;
-            padding: 50px;
+            padding: 30px;
         }
 
         h2 {
-            margin:0px;
+            margin: 0px;
             padding: 20px;
             font-family: 'Lobster Two', cursive;
         }
 
-        figcaption {
-            margin: 20px;
-        }
 
-        .contact-sec{
+        .contact-sec {
+            background-image: url(images/floral.png);
             background-color: rgba(95, 140, 138, 0.42);
         }
 
-        footer{
-            background-color:#212121; 
+        footer {
+            background-color: #212121;
             color: white;
         }
-        
-        .contact-sec i{
+
+        .contact-sec i {
             padding: 15px 15px;
             border: 1px solid black;
             border-radius: 50%;
         }
 
-     .m{
-            margin:10px;
+        .contact-sec i:hover {
+            color: #fcdea6;
+            background-color: black;
         }
 
-        footer{
-            padding:45px;
-        }
-        footer p{
-            font-size:19px;
-            font-weight:normal;
-        }
-       footer i{
-            color:white;
+        .m {
+            margin: 10px;
         }
 
-        footer:hover i{
+        footer {
+            padding: 45px;
+        }
+
+        footer p {
+            font-size: 19px;
+            font-weight: normal;
+        }
+
+        footer i {
+            color: white;
+        }
+
+        i {
+            transition: color 2s, background-color 2s;
+        }
+
+        footer:hover i {
             color: red;
+        }
+
+        .p-5:hover {
+            color: black;
+        }
+
+        .service-icon i:hover {
+            color: red;
+        }
+
+
+        .portfolio-hover {
+            display: none;
+        }
+
+        .portfolio-imgs figure:hover figcaption {
+            display: block;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 0px;
+            padding: 54px;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .portfolio-hover h4 {
+            margin-top: 0px;
+        }
+
+        .portfolio-hover i {
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        .portfolio-hover i:hover {
+            background-color: grey;
+        }
+
+        #image1 {
+            background-image: url("images/projects/p-1.png");
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #image2 {
+            background-image: url("images/projects/p-2.png");
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #image3 {
+            background-image: url("images/projects/p-3.png");
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #image4 {
+            background-image: url("images/projects/p-4.png");
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #image5 {
+            background-image: url("images/projects/p-5.png");
+            width: 250px;
+            height: 200x;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #image6 {
+            background-image: url("images/projects/p-6.png");
+            width: 250px;
+            height: 200px;
+            border-radius: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
