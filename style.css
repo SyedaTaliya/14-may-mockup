@@ -3,35 +3,44 @@
             text-align: center;
         }
 
-        p {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 16px;
+        section {
+            background-image: url(images/floral.png);
+        }
+
+        section p {
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px;
+            width: 50%;
+            margin: 0 auto;
             font-weight: bold;
         }
+
         /* about marquee */
-        .headline{
+
+        .headline {
             background-color: #ed484c;
             line-height: 10px;
-            color:white;
+            color: white;
             white-space: nowrap;
-            overflow: hidden;   
-            }
+            overflow: hidden;
+        }
 
-        .headline p{
+        .headline p {
             margin: 0;
             padding: 5px 0px;
             padding-left: 50%;
             animation: headline 9s linear infinite;
-            }
+        }
 
         @keyframes headline {
-            0% {transform:translate(0,0);}
-            100% {transform:translate(-100%,0);}
-          }
+            100% {
+                transform: translate(-100%, 0);
+            }
+        }
 
-        
-        .navigation + .join-now-sec{
-           padding-top: 5em;
+        .navigation+.join-now-sec {
+            padding-top: 5em;
         }
 
         /* navigation */
@@ -39,10 +48,11 @@
         .navigation {
             display: flex;
             justify-content: space-between;
-            background-color: #4c4c4c;
+            background-color:rgba(76,76,76,0.8);
             position: fixed;
             top: 25px;
-            width: 100%;   
+            z-index:1;
+            width: 100%;
         }
 
         .navigation ul {
@@ -52,7 +62,7 @@
         .navigation ul li {
             list-style-type: none;
             padding: 10px;
-            color: lightgray;
+            color: #d3d3d3;
             font-size: 20px;
         }
 
@@ -62,16 +72,17 @@
             margin-left: 18px;
             margin-top: 14px;
         }
-/* about join-section */
+
+        /* about join-section */
+
         .join-now-sec {
-            background-image: url(images/floral.png);
             background-color: rgba(239, 50, 69, 0.57);
             padding: 10px 10px;
             text-align: center;
-            height: 400px;
+            height: 450px;
         }
 
-        .join-now {
+        button {
             padding: 0.8em 4em;
             background-color: black;
             color: #f18d97;
@@ -80,20 +91,10 @@
             margin: 20px;
         }
 
-        .join-now-sec p {
-            font-weight: normal !important;
-        }
 
         h1 {
             font-size: 3.5em;
             font-family: 'Source Sans Pro', sans-serif;
-        }
-
-        .para-border {
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            width: 50%;
-            margin: auto;
         }
 
         .service-icon {
@@ -101,23 +102,7 @@
         }
 
         .service-section {
-            background-image: url(images/floral.png);
             background-color: rgba(171, 163, 147, 0.23);
-        }
-
-
-
-        .portfolio-sec {
-            background-image: url(images/floral.png);
-            background-color: rgba(148, 107, 36, 0.35);
-        }
-
-        .portfolio-imgs {
-            display: flex;
-        }
-
-        .portfolio-sec img {
-            padding: 30px;
         }
 
         h2 {
@@ -126,9 +111,7 @@
             font-family: 'Lobster Two', cursive;
         }
 
-
         .contact-sec {
-            background-image: url(images/floral.png);
             background-color: rgba(95, 140, 138, 0.42);
         }
 
@@ -182,90 +165,120 @@
         }
 
 
-        .portfolio-hover {
-            display: none;
+        .portfolio-sec img {
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
         }
 
-        .portfolio-imgs figure:hover figcaption {
+        .portfolio-sec {
+            background-color: #ddceb4;
+        }
+        
+        h2{
+            color: black;
+        }
+
+        .portfolio-imgs {
+            display: grid;
+            grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+            width: 80%;
+            margin:auto;
+        }
+
+        .portfolio-sec figure {
+            position: relative;
+            transition: 1s;
+        }
+        
+        .portfolio-sec figure:hover figcaption {
             display: block;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin: 0px;
-            padding: 54px;
+            background-color: rgba(0, 0, 0, 0.5);
             text-align: center;
             border-radius: 10px;
-            cursor: pointer;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            padding: 27px 28px 29px 27px;
+            transition: 1s;
+        }
+        
+        .portfolio-sec figcaption i:hover {
+            color:white;
+            background-color:white;
+            border-color: white;
+            transition: 1s;
+        }
+        
+        .portfolio-sec figcaption i{
+            font-size: 15px;
+            padding: 8px 9px;
+            border-radius: 30px;
+            background-color: rgba(175, 199, 198, 0);
+            border: 1px solid white;
+            margin-right: 10px;
+            color: white;
+        }
+
+        .portfolio-sec figcaption {
+            text-align: center;
+            display: none;
             transition: 1s;
         }
 
-        .portfolio-hover h4 {
-            margin-top: 0px;
+        h4{
+            color:white;
+        }
+        
+        
+
+        /* media Queries */
+
+        /* for Mobile View */
+
+        @media screen and (max-width: 600px) {
+            
+            .service-icon {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .portfolio-sec{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .portfolio-imgs {
+                display: grid;
+                grid-template: repeat(6, 1fr)/repeat(1, 1fr);
+                width: 100%;
+                margin:auto; 
+            }
+    
+            .navigation {
+                position: sticky;
+                top: 0;
+            }
         }
 
-        .portfolio-hover i {
-            padding: 10px;
-            border: 1px solid white;
-            border-radius: 20px;
-            margin-top: 10px;
-            font-size: 20px;
+        @media screen and (min-width: 600px) and (max-width: 900px) {
+            .service-icon {
+                display: flex;
+                flex-direction: column;
+            }
+            .portfolio-imgs {
+                display: grid;
+                grid-template: repeat(2, 1fr)/repeat(2, 1fr);
+                width: 80%;
+                margin:auto;
+            }
+    
+            .navigation {
+                position: sticky;
+                top: 0;
+            }
         }
-
-        .portfolio-hover i:hover {
-            background-color: grey;
-        }
-
-        #image1 {
-            background-image: url("images/projects/p-1.png");
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #image2 {
-            background-image: url("images/projects/p-2.png");
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #image3 {
-            background-image: url("images/projects/p-3.png");
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #image4 {
-            background-image: url("images/projects/p-4.png");
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #image5 {
-            background-image: url("images/projects/p-5.png");
-            width: 250px;
-            height: 200x;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        #image6 {
-            background-image: url("images/projects/p-6.png");
-            width: 250px;
-            height: 200px;
-            border-radius: 10px;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        @media screen (max-width:900px)
+        
